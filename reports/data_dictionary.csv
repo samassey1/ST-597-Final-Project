@@ -1,0 +1,21 @@
+Variable,Role,Type,Description,Missing Count,Missing Percent,Unique Values,Preparation
+CRASH_RECORD_ID,Identifier,Categorical,Unique identifier for each reported crash,0,0.0,222301,Identifier only; exclude from predictors
+CRASH_DATE,Split variable,Datetime,Date and time of the crash,0,0.0,149167,Use year for chronological train/test split; exclude from predictors
+STREET_NAME,CV grouping,Categorical,Street name used for grouped cross-validation,0,0.0,1431,Standardize street names; use for grouping only
+multiple_injuries,Response,Binary,1 if two or more people were injured; 0 otherwise,0,0.0,2,Created from INJURIES_TOTAL >= 2; excluded from predictors
+POSTED_SPEED_LIMIT,Predictor,Numeric,Posted speed limit at the crash location,0,0.0,34,Convert to numeric; median imputation within CV folds
+WEATHER_CONDITION,Predictor,Categorical,Weather conditions at the time of the crash,0,0.0,12,Treat missing as Unknown; one-hot encode within CV folds
+LIGHTING_CONDITION,Predictor,Categorical,Lighting conditions at the time of the crash,0,0.0,6,Treat missing as Unknown; one-hot encode within CV folds
+ROADWAY_SURFACE_COND,Predictor,Categorical,Condition of the roadway surface,0,0.0,7,Treat missing as Unknown; one-hot encode within CV folds
+TRAFFIC_CONTROL_DEVICE,Predictor,Categorical,Type of traffic control device present,0,0.0,18,Treat missing as Unknown; one-hot encode within CV folds
+ALIGNMENT,Predictor,Categorical,Roadway alignment at the crash location,0,0.0,6,Treat missing as Unknown; one-hot encode within CV folds
+ROAD_DEFECT,Predictor,Categorical,Reported roadway defects,0,0.0,7,Treat missing as Unknown; one-hot encode within CV folds
+INTERSECTION_RELATED_I,Predictor,Categorical,Whether the crash was intersection-related,170623,76.75,2,Treat missing as Unknown; one-hot encode within CV folds
+STREET_DIRECTION,Predictor,Categorical,Direction of the street,0,0.0,4,Treat missing as Unknown; one-hot encode within CV folds
+TRAFFICWAY_TYPE,Predictor,Categorical,Type of trafficway,0,0.0,20,Treat missing as Unknown; one-hot encode within CV folds
+CRASH_HOUR,Predictor,Categorical,Hour of day when the crash occurred,0,0.0,24,Treat missing as Unknown; one-hot encode within CV folds
+CRASH_DAY_OF_WEEK,Predictor,Categorical,Day of week when the crash occurred,0,0.0,7,Treat missing as Unknown; one-hot encode within CV folds
+CRASH_MONTH,Predictor,Categorical,Month when the crash occurred,0,0.0,12,Treat missing as Unknown; one-hot encode within CV folds
+WORK_ZONE_I,Predictor,Categorical,Whether the crash occurred in a work zone,221277,99.54,2,Treat missing as Unknown; one-hot encode within CV folds
+WORK_ZONE_TYPE,Predictor,Categorical,Type of work zone,221564,99.67,4,Treat missing as Unknown; one-hot encode within CV folds
+WORKERS_PRESENT_I,Predictor,Categorical,Whether workers were present in the work zone,222046,99.89,2,Treat missing as Unknown; one-hot encode within CV folds
