@@ -2,7 +2,7 @@
 
 **ST 597 Final Project — Protocol Checkpoint & Data Pipeline**
 
-## 📌 Project Overview
+## Project Overview
 
 Traffic crashes involving multiple injuries account for a significant portion of overall traffic harm in Chicago. Although multiple-injury crashes constitute only **4.14%** of total reported collisions between 2023 and 2025 (13,707 out of 331,203 cleaned observations), they represent nearly half of all recorded injuries across the city.
 
@@ -12,7 +12,7 @@ Rather than focusing on causal inference or post-investigation factors, this rep
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 ├── data/
@@ -38,7 +38,7 @@ Rather than focusing on causal inference or post-investigation factors, this rep
 
 ---
 
-## 📓 Notebook Guide
+## Notebook Guide
 
 ### `notebooks/01_preliminary_exploration.ipynb`
 * **Purpose:** Initial exploratory data analysis (EDA) conducted to evaluate dataset feasibility and establish project scope for the application.
@@ -59,7 +59,7 @@ Rather than focusing on causal inference or post-investigation factors, this rep
 
 ---
 
-## 🛠️ Data Pipeline & Methodology Summary
+## Data Pipeline & Methodology Summary
 
 * **Target Variable (`multiple_injuries`):**
   * `1` = Crash resulted in 2 or more injured persons ($\text{INJURIES\_TOTAL} \ge 2$).
@@ -70,7 +70,7 @@ Rather than focusing on causal inference or post-investigation factors, this rep
 
 ---
 
-## 🚀 Instructions for Running the Pipeline
+## Instructions for Running the Pipeline
 
 ### 1. Environment Setup
 
@@ -94,7 +94,7 @@ Execute `notebooks/02_protocol_checkpoint_pipeline.ipynb`. The script will autom
 
 ---
 
-## 📊 Summary of Baseline Benchmark
+## Summary of Baseline Benchmark
 
 | Metric | Fold Mean | Std Dev | Notes |
 | :--- | :---: | :---: | :--- |
@@ -107,7 +107,7 @@ Execute `notebooks/02_protocol_checkpoint_pipeline.ipynb`. The script will autom
 
 ---
 
-## 🔒 Data Leakage Audit Rules
+## Data Leakage Audit Rules
 
 To guarantee valid out-of-sample predictions, the following 11 variables are **permanently excluded** from modeling predictors:
 
