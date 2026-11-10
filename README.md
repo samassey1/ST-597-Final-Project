@@ -82,20 +82,12 @@ cd chicago-crash-prediction
 pip install -r requirements.txt
 ```
 
-### 2. Data Placement
-
-Ensure the raw Chicago Traffic Crashes CSV file is placed inside `data/raw/`:
-
-```text
-data/raw/Traffic_Crashes_-_Crashes_20261013.csv
-```
-
-### 3. Running Notebooks
+### 2. Running Notebooks
 
 Launch Jupyter Lab to run the pipeline:
 
 ```bash
-jupyter lab
+jupyter notebook
 ```
 
 Execute `notebooks/02_protocol_checkpoint_pipeline.ipynb`. The script will automatically verify whether processed files exist; if missing, it will generate all clean datasets, fold assignments, and reports inside `data/processed/` and `reports/`.
