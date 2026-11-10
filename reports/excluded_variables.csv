@@ -1,0 +1,12 @@
+Variable,Role,Reason
+INJURIES_TOTAL,Excluded,Used to construct the response variable
+INJURIES_FATAL,Excluded,Injury severity information determined after the crash
+INJURIES_INCAPACITATING,Excluded,Injury severity information determined after the crash
+INJURIES_NON_INCAPACITATING,Excluded,Injury severity information determined after the crash
+INJURIES_REPORTED_NOT_EVIDENT,Excluded,Injury severity information determined after the crash
+INJURIES_NO_INDICATION,Excluded,Injury information determined after the crash
+INJURIES_UNKNOWN,Excluded,Injury information determined after the crash
+MOST_SEVERE_INJURY,Excluded,Injury severity information determined after the crash
+CRASH_TYPE,Excluded,Crash classification may contain post-outcome information
+PRIM_CONTRIBUTORY_CAUSE,Excluded,Contributing cause determined during investigation
+SEC_CONTRIBUTORY_CAUSE,Excluded,Contributing cause determined during investigation

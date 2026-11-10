@@ -1,0 +1,81 @@
+{
+    "random_seed": 597,
+    "primary_metric": "average_precision",
+    "cross_validation": "5-fold GroupKFold using STREET_NAME",
+    "numeric_predictors": [
+        "POSTED_SPEED_LIMIT"
+    ],
+    "categorical_predictors": [
+        "WEATHER_CONDITION",
+        "LIGHTING_CONDITION",
+        "ROADWAY_SURFACE_COND",
+        "TRAFFIC_CONTROL_DEVICE",
+        "ALIGNMENT",
+        "ROAD_DEFECT",
+        "INTERSECTION_RELATED_I",
+        "STREET_DIRECTION",
+        "TRAFFICWAY_TYPE",
+        "CRASH_HOUR",
+        "CRASH_DAY_OF_WEEK",
+        "CRASH_MONTH",
+        "WORK_ZONE_I",
+        "WORK_ZONE_TYPE",
+        "WORKERS_PRESENT_I"
+    ],
+    "numeric_preprocessing": [
+        "Median imputation",
+        "Standard scaling"
+    ],
+    "categorical_preprocessing": [
+        "Constant imputation with Unknown",
+        "One-hot encoding with unknown categories ignored"
+    ],
+    "hyperparameter_grids": {
+        "Logistic Regression": {
+            "model__penalty": [
+                "l1",
+                "l2"
+            ],
+            "model__C": [
+                0.01,
+                0.1,
+                1,
+                10
+            ],
+            "model__class_weight": [
+                null,
+                "balanced"
+            ]
+        },
+        "Random Forest": {
+            "model__max_depth": [
+                null,
+                10,
+                20
+            ],
+            "model__min_samples_leaf": [
+                1,
+                5,
+                10
+            ],
+            "model__class_weight": [
+                null,
+                "balanced"
+            ]
+        },
+        "Gradient Boosting": {
+            "model__learning_rate": [
+                0.05,
+                0.1
+            ],
+            "model__max_depth": [
+                2,
+                3
+            ],
+            "model__max_iter": [
+                100,
+                200
+            ]
+        }
+    }
+}
